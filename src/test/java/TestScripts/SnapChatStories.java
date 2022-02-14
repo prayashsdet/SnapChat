@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.POM.LoginPage;
@@ -13,7 +14,7 @@ import GenericUtils.BaseClass;
 import GenericUtils.WebDriverUtilty;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-
+@Listeners(GenericUtils.Listeners.class)
 public class SnapChatStories extends BaseClass {
 	@Test
 	public void demo() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException {

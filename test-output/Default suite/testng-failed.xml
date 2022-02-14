@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScripts.SnapChatSpotlight">
+      <class name="TestScripts.SnapChat">
         <methods>
-          <include name="demo"/>
           <include name="openApp"/>
+          <include name="demo"/>
         </methods>
-      </class> <!-- TestScripts.SnapChatSpotlight -->
+      </class> <!-- TestScripts.SnapChat -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

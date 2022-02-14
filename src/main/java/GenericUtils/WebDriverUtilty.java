@@ -24,5 +24,9 @@ public class WebDriverUtilty {
 			TouchAction ta =new TouchAction(driver);
 			ta.press(PointOption.point(0,scrollStart)).waitAction(WaitOptions.waitOptions(java.time.Duration.ofMillis(1000))).moveTo(PointOption.point(0, scrollEnd)).release().perform();
 				      }
+	 public void scrollToElement(AndroidDriver driver ,String an,String av) {
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+an+"(\""+av+"\"))").click();
+			System.out.println("scrolled to and clicked successfully on logout");
+		}
 
 	 }

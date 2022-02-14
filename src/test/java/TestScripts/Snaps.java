@@ -4,32 +4,34 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.POM.LoginPage;
-import com.POM.SpotlightPage;
-import com.POM.StoriesPage;
+import com.POM.SnapsPage;
 
 import GenericUtils.BaseClass;
 import GenericUtils.WebDriverUtilty;
-@Listeners(GenericUtils.Listeners.class)
-public class SnapChatSpotlight  extends BaseClass{
+
+public class Snaps extends BaseClass {
 	@Test
 	public void demo() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException {
 		WebDriverUtilty wd =new WebDriverUtilty();
 		LoginPage pm = new LoginPage(driver);
-		SpotlightPage sp =new SpotlightPage(driver);
+		SnapsPage sps =new SnapsPage(driver);
 		pm.clickOnLogin();
 		pm.usePhoneNumber();
 		pm.enterPasswordDetails();
 	    pm.clickOnLoginAgain();
-	    wd.WaitForMilliSeconds(3000);
-		sp.clickOnSpotlightIcon();
-		sp.addToFavourite();
-		sp.printUserName();
-		sp.navigateToAccountDetailsPage();
-		sp.clickOnSpotLightFavouritePage();
-		sp.verifySpotlightAdded();
+	    wd.WaitForMilliSeconds(6000);
+	    sps.tapOnFlipCameraButon();
+	   sps.tapOnCameraButton();
+	   sps.tapOnAllowButton();
+	    sps.tapOnAddToStorybutton();
+	    sps.tapOnDialogBox();
+	    sps.addedToStory();
+	    sps.tapOnGotoStory();
+	    sps.checkIfStoryDisplayed();
+		
+		
 }
 }

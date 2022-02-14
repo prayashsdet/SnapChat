@@ -205,6 +205,7 @@ public void storyusername() throws IOException, EncryptedDocumentException, Inva
 				 SoftAssert sf =new SoftAssert();
 				 sf.assertEquals(fu.getExcelData("Sheet1", 0, 0), text);
 				 System.out.println("assertion successful");
+				 sf.assertAll();
 			}
 			
 			public StoriesPage(AndroidDriver driver) {

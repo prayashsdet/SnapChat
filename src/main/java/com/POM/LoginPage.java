@@ -36,6 +36,40 @@ public MobileElement loginbuttonagain ;
 @AndroidFindBy(id= "com.snapchat.android:id/forgot_password_button")
 public MobileElement otplogin ;
 
+
+
+/*xpath for openAccount*/
+@AndroidFindBy(id= "com.snapchat.android:id/avatar_silhouette_3")
+public MobileElement GoAccountbutton;
+
+
+
+/*xpath for Settings*/
+@AndroidFindBy(xpath= "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.View")
+public MobileElement SettingsButton;
+
+
+
+/**
+ * this is for opening settings button
+ */
+
+
+
+public void tapOnSettingsIcon() {
+	SettingsButton.click();
+	System.out.println("tapped on settings icon successfully");
+}
+ 
+/**
+ * this method is for opening account
+ */
+
+
+public void tapOnOpenAccountButton() {
+	GoAccountbutton.click();
+	System.out.println("open account successfully");
+}
 /**
  * this method is for clicking on login button
  * @param driver
@@ -78,6 +112,7 @@ public void enterPasswordDetails() {
 public void entermobileNumber() {
 	phonenumbertextfield.clear();
 	phonenumbertextfield.sendKeys("7008405914");
+	System.out.println("number typed successfully");
 }
 /**
  * this method is for clicking on login after entering username and password

@@ -64,6 +64,9 @@ public void verifySpotlightAdded() {
 	System.out.println("verified:spotlight already added:test case passed succesfully");
 }
 
+
+
+
 /**
  * this method is for clicking on spottightfavouritepage
  */
